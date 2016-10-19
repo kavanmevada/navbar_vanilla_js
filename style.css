@@ -1,0 +1,172 @@
+body {
+  height: 2000px;
+  margin: 0;
+}
+/* ####################################  NAVIGATION BAR  ######################################### */
+/* Begin Navigation bar Container */
+.container {
+  width: 100%;
+  margin-bottom: 20px;
+  position: fixed;
+  z-index: 3000;
+  margin: 0;
+  padding: 0;
+}
+/* End Navigation bar Container */
+/* Logo*/
+.frame {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.frame_logo {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 15px;
+  z-index: 0;
+}
+
+.frame_logo > img {
+  display: block;
+  position: relative;
+  height: 100%;
+}
+
+.mob_menu_toggle {
+  float: right;
+  display: none;
+  position: relative;
+  padding: 15px;
+  text-decoration: none;
+  color: #000;
+  z-index: 100;
+}
+
+/* End Logo*/
+/* Begin Navigation bar */
+.navbar {
+  display: table;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Begin Nevigation Panel */
+.nav-panel {
+  display: block;
+  width: 540px;
+  float: right;
+}
+.nav-panel ul {
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  display: block;
+  float: left;
+  padding: 0;
+  transition: all .5s;
+}
+
+.nav.active {
+  max-height: 500px;
+}
+
+.nav > li {
+  display: inline-block;
+  position: relative;
+  margin-left: -4px;
+/* solve the 4 pixels spacing between list-items */
+}
+
+.nav > li > a {
+  font-size: 14px;
+  color: #000;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+}
+
+/* End Nevigation Panel */
+/* Begin Drop Down Menu */
+.sub-menu {
+  width: auto; /* change auto value with 200px if you want a bigger menu */
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  transition: all .5s;
+  z-index: 9999999; /* if you have YouTube iframes, is good to have a bigger z-index so the video can appear above the video */
+}
+
+.sub-menu > li > a {
+  font-size: 13px;
+  color: #000;
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+}
+
+/* End Drop Down Menu */
+/* Begin Mobile Suport */
+/*Responsive Styles*/
+@media screen and (max-width : 767px) {
+  /*Make dropdown links appear inline*/
+  .navbar {
+    width: 100%;
+  }
+  .frame {
+    height: 54px;
+    position: relative;
+  }
+  .mob_menu_toggle {
+    display: block;
+  }
+  .nav-panel {
+    width: 100%;
+  }
+  .nav > li {
+    display: block;
+    position: relative;
+  }
+  .nav {
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+  }
+  .nav > li > ul {
+    position: relative;
+  }
+  .nav > li > ul > li > a {
+    margin-left: 10px;
+  }
+}
+/* End Mobile Suport */
+/* ####################################  END  ######################################### */
+
+/* User Define*/
+.container {
+  background-color: rgba(255,228,225,1);
+}
+.container a {
+  font-family: sans-serif;
+}
+.nav > li > a {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.sub-menu {
+  background-color: rgba(255,228,225,0.95);
+}
+/* End */
